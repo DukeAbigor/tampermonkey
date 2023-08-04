@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         EliRedirect
-// @namespace    http://tampermonkey.net/
+// @namespace    https://politicsandwar.com/nation/id=97917
 // @version      0.1
 // @description  allows a parsable url for requests to redirect to the bank page
 // @author       Eligos
