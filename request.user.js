@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         EliRequest
-// @namespace    http://tampermonkey.net/
+// @namespace    https://politicsandwar.com/nation/id=97917
 // @version      0.1
 // @description  adds a form to auto parse requests
 // @author       Eligos
