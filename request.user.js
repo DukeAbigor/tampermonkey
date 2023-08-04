@@ -308,7 +308,7 @@ async function getIdByLeader(name) {
 
 
 
-  ['uranium', 'iron', 'bauxite', 'coal', 'oil', 'steel', 'munitions', 'aluminum', 'gasoline', 'money', 'note']
+  ['food', 'uranium', 'iron', 'bauxite', 'coal', 'oil', 'steel', 'munitions', 'aluminum', 'gasoline', 'money', 'note']
     .forEach(param => {
       if (vars[param]) {
         setValue(`with${param}`, decodeURIComponent(vars[param]));
