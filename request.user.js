@@ -152,6 +152,9 @@ async function getIdByLeader(name) {
   container.appendChild(separator);
 
   async function updateArray() {
+    if (!textarea.value || textarea.value === '') {
+      return;
+    }
     const array = separator.value ? textarea.value.split(separator.value) : textarea.value.split('\n');
 
     const aliases = {
