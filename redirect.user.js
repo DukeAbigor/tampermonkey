@@ -2,8 +2,8 @@
 // @name         EliRedirect
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @description  allows a parsable url for requests to redirect to the bank page
+// @author       Eligos
 // @match        https://politicsandwar.com/nation/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=politicsandwar.com
 // @grant        none
