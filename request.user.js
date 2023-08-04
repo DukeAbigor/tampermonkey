@@ -255,7 +255,7 @@ async function getIdByLeader(name) {
             modified.splice(modified.indexOf(keywordMatch), 1);
           } else {
             setValue(`withrecipient`, keywordText);
-            setValue(`with${keywordMatch}`, keywordText.charAt(0).toUpperCase() + keywordText.slice(1));
+            setValue(`withtype`, keywordMatch.charAt(0).toUpperCase() + keywordMatch.slice(1));
             modified.splice(modified.indexOf('recipient'), 1);
           }
       }
