@@ -34,39 +34,16 @@
 
   var url = `https://politicsandwar.com/alliance/id=${alliance}&display=bank`;
 
-  if (vars["recipient"]) {
-    url += "&recipient=" + vars["recipient"];
+  if (vars.recipient) {
+    url += "&recipient=" + vars.recipient;
   } else if (id) {
-    const apiUrl = 'https://api.politicsandwar.com/graphql?api_key=bce6428a6a9a385eb9c3';
-    const query = `{
-      nations(first: 1, id: ${id}) {
-        data {
-          nation_name
-        }
-      }
-    }`;
-
-    await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        const name = data.data.nations.data[0].nation_name;
-        url += `&recipient=${encodeURIComponent(name)}&type=Nation`;
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+    url += `&recipient=${id}&type=ID`;
 
   } else {
     return;
   }
 
-  ['uranium', 'iron', 'bauxite', 'coal', 'oil', 'steel', 'munitions', 'aluminum', 'gasoline', 'money', 'type', 'note']
+  ['food', 'uranium', 'iron', 'bauxite', 'coal', 'oil', 'steel', 'munitions', 'aluminum', 'gasoline', 'money', 'type', 'note']
     .forEach(param => {
       if (vars[param]) {
         url += "&" + param + "=" + vars[param];
